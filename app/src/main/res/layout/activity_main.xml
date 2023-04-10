@@ -7,23 +7,13 @@
     android:background="@drawable/main_login_background"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/login_label_background"
-        android:minHeight="150dp"
-        app:layout_constraintTop_toTopOf="parent">
 
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
 
         <Button
-            android:id="@+id/entryPeriod"
+            android:id="@+id/entryPeriodFilter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
@@ -32,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/categoryList"
+            android:id="@+id/categoryListFilter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
@@ -41,6 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginTop="1dp"
@@ -49,31 +40,36 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/categoryList"></LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/categoryListFilter"></LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavMenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:width="200dp"
-        android:height="20dp"
-        android:background="@drawable/button_background"
-        android:fontFamily="sans-serif"
-        android:text="Log Entry"
-        android:textSize="20dp"
-        app:backgroundTint="@null"
+        android:height="40dp"
+        android:background="@drawable/nav_bar_background"
+        app:itemIconSize="27dp"
+        app:itemIconTint="@color/button_color"
+
+        app:itemTextColor="@color/button_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
