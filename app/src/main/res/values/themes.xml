@@ -13,4 +13,7 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="btnNewEntry" parent="Widget.AppCompat.Button">
+        <item name="android:background"> @drawable/time_sheet_entry_btn_background</item>
+    </style>
 </resources>

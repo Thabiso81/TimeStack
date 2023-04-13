@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/miHome"
-        android:title="Home"
-        android:icon="@drawable/outline_home_24"/>
+        android:id="@+id/miEntries"
+        android:title="Entries"
+        android:icon="@drawable/ic_entries"/>
 
     <item
-        android:id="@+id/addEntry"
-        android:title="Add entry"
-        android:icon="@drawable/round_add_circle_24"/>
+        android:id="@+id/miCreateCategory"
+        android:title="Categories"
+        android:icon="@drawable/ic_category"/>
 
     <item
         android:id="@+id/miGraph"
         android:title="Stats"
-        android:icon="@drawable/round_insert_chart_outlined_24"/>
+        android:icon="@drawable/ic_graph"/>
 </menu>
