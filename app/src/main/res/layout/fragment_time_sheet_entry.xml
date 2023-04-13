@@ -13,8 +13,6 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,7 +21,6 @@
             android:id="@+id/topLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -31,12 +28,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_gravity="bottom|left"
-                android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/abeezee"
-                android:text="Sort by category"
+                android:text="Sort by client"
                 android:textColor="#ffffff"
                 android:textSize="19dp" />
 
@@ -44,11 +40,8 @@
                 android:id="@+id/categoryListFilter"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
-
                 android:layout_marginHorizontal="10dp"
-
                 android:background="@drawable/spinner_background"
-
                 android:hint="Category"
                 android:textColorHint="#090A0B" />
         </LinearLayout>
@@ -59,7 +52,6 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="4dp"
-
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="5dp"
         android:background="@color/View_holder_color"
@@ -68,18 +60,142 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
-    <Button
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/entry1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/entry1"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/time_sheet_entry_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/entryTitle1"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:text="Create interface"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/imageView1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/startDate1"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/time_sheet_text_view_background"
+                android:paddingLeft="6dp"
+                android:text="Start date: 20 May 2023"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView1"
+                app:layout_constraintTop_toBottomOf="@id/entryTitle1" />
+
+            <TextView
+                android:id="@+id/endDate1"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/time_sheet_text_view_background"
+                android:paddingLeft="6dp"
+                android:text="End date: 15 June 2023"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView1"
+                app:layout_constraintTop_toBottomOf="@id/startDate1" />
+
+            <TextView
+                android:id="@+id/category1"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/time_sheet_text_view_background"
+                android:paddingLeft="6dp"
+                android:text="Client: Adapt IT"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView1"
+                app:layout_constraintTop_toBottomOf="@+id/endDate1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:gravity="left"
+                android:background="@drawable/time_sheet_text_view_background"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView1">
+
+                <TextView
+                    android:id="@+id/description1"
+                    android:layout_width="120dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:paddingLeft="6dp"
+                    android:text="Descripton:"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:id="@+id/descriptionContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingLeft="6dp"
+                    android:text="Design new user login page."
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNewEntry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="7dp"
         android:background="@drawable/time_sheet_entry_btn_background"
-
-        android:backgroundTint="@null"
+        android:gravity="center"
+        android:paddingHorizontal="120dp"
         android:drawableStart="@drawable/ic_new_entry"
-        android:onClick="btnNewEntry"
-        android:text="New Entry"
-        app:icon="@drawable/ic_new_entry"
+        android:backgroundTint="@null"
+        android:textSize="20dp"
+        android:textColor="@color/button_color"
+        android:text="Add Entry"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

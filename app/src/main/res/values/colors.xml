@@ -15,6 +15,7 @@
     <color name="hint_color">#B3B3B3</color>
     <color name="text_view_color">#E0FFFFFF</color>
     <color name="View_holder_color">#3c3f46</color>
+    <color name="View_holder_color2">#3C4346</color>
     <color name="grey">#3C3F41</color>
 
 </resources>
