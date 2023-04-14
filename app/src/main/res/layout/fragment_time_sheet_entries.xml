@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_login_background"
+    android:background="@drawable/layout_background_main_application_background"
     tools:context=".TimeSheetEntryFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -21,7 +21,8 @@
             android:id="@+id/topLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginVertical="20dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -31,18 +32,20 @@
                 android:layout_gravity="bottom|left"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
-                android:fontFamily="@font/abeezee"
-                android:text="Sort by client"
+
+                android:text="Sort by time period:"
                 android:textColor="#ffffff"
                 android:textSize="19dp" />
 
-            <Spinner
+            <TextView
                 android:id="@+id/categoryListFilter"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:layout_marginHorizontal="10dp"
-                android:background="@drawable/spinner_background"
-                android:hint="Category"
+                android:background="@drawable/view_backround_calendar_textview"
+                android:drawableRight="@drawable/ic_calendar"
+                android:drawablePadding="20dp"
+                android:hint=""
                 android:textColorHint="#090A0B" />
         </LinearLayout>
 
@@ -69,10 +72,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/entry1"
             android:layout_width="match_parent"
-            android:layout_height="290dp"
+            android:layout_height="320dp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginVertical="10dp"
-            android:background="@drawable/time_sheet_entry_background"
+            android:background="@drawable/layout_background_timesheet_entries"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +83,9 @@
 
             <ImageView
                 android:id="@+id/imageView1"
-                android:layout_width="100dp"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:layout_marginTop="20dp"
                 android:src="@drawable/ic_image"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -97,50 +101,69 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView1"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/startDate1"
-                android:layout_width="220dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/time_sheet_text_view_background"
-                android:paddingLeft="6dp"
-                android:text="Start date: 20 May 2023"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
+            <LinearLayout
+                android:id="@+id/taskDetailLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:gravity="right"
                 app:layout_constraintStart_toEndOf="@id/imageView1"
-                app:layout_constraintTop_toBottomOf="@id/entryTitle1" />
+                app:layout_constraintTop_toBottomOf="@id/entryTitle1">
+                <TextView
+                    android:id="@+id/Date1"
+                    android:layout_width="220dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_background_time_sheet_entry_textview"
+                    android:paddingLeft="6dp"
+                    android:text="Date: 30 May 2023"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    />
 
-            <TextView
-                android:id="@+id/endDate1"
-                android:layout_width="220dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/time_sheet_text_view_background"
-                android:paddingLeft="6dp"
-                android:text="End date: 15 June 2023"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView1"
-                app:layout_constraintTop_toBottomOf="@id/startDate1" />
+                <TextView
+                    android:id="@+id/startDate1"
+                    android:layout_width="220dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_background_time_sheet_entry_textview"
+                    android:paddingLeft="6dp"
+                    android:text="Start time: 12:04"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                     />
 
-            <TextView
-                android:id="@+id/category1"
-                android:layout_width="220dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/time_sheet_text_view_background"
-                android:paddingLeft="6dp"
-                android:text="Client: Adapt IT"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView1"
-                app:layout_constraintTop_toBottomOf="@+id/endDate1" />
+                <TextView
+                    android:id="@+id/endDate1"
+                    android:layout_width="220dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_background_time_sheet_entry_textview"
+                    android:paddingLeft="6dp"
+                    android:text="End time: 16:55"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    />
+
+                <TextView
+                    android:id="@+id/category1"
+                    android:layout_width="220dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_background_time_sheet_entry_textview"
+                    android:paddingLeft="6dp"
+                    android:text="Client: Adapt IT"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -148,10 +171,10 @@
                 android:layout_marginTop="10dp"
                 android:orientation="vertical"
                 android:gravity="left"
-                android:background="@drawable/time_sheet_text_view_background"
+                android:background="@drawable/view_background_time_sheet_entry_textview"
                 android:layout_marginHorizontal="10dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView1">
+                app:layout_constraintTop_toBottomOf="@+id/taskDetailLayout">
 
                 <TextView
                     android:id="@+id/description1"
@@ -187,14 +210,14 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="7dp"
-        android:background="@drawable/time_sheet_entry_btn_background"
+        android:background="@drawable/view_background_timesheet_entry_button"
         android:gravity="center"
-        android:paddingHorizontal="120dp"
-        android:drawableStart="@drawable/ic_new_entry"
+        android:paddingHorizontal="100dp"
+        android:drawableStart="@drawable/ic_new_timesheet_entry"
         android:backgroundTint="@null"
         android:textSize="20dp"
         android:textColor="@color/button_color"
-        android:text="Add Entry"
+        android:text="Add New Entry"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

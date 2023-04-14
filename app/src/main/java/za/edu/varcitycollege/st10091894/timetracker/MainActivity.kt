@@ -3,11 +3,14 @@ package za.edu.varcitycollege.st10091894.timetracker
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 private val timeSheetEntryFragment = TimeSheetEntryFragment()
 private val timeSheetCategoryFragment = TimeSheetCategoryFragment()
 private val timeSheetStatsFragment = TimeSheetStatsFragment()
+
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.miEntries -> replaceFragment(timeSheetEntryFragment)
-                R.id.miCreateCategory -> replaceFragment(timeSheetCategoryFragment)
+                R.id.miCreateClient -> replaceFragment(timeSheetCategoryFragment)
                 R.id.miGraph -> replaceFragment(timeSheetStatsFragment)
             }
             true

@@ -10,9 +10,9 @@
                 </shape>
             </item>
             <item
-                android:drawable="@drawable/spinner_icon"
+                android:drawable="@drawable/ic_spinner"
                 android:gravity="center|right"
-                />
+            />
 
         </layer-list>
     </item>

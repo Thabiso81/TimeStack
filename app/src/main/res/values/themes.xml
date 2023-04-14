@@ -14,6 +14,6 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="btnNewEntry" parent="Widget.AppCompat.Button">
-        <item name="android:background"> @drawable/time_sheet_entry_btn_background</item>
+        <item name="android:background">@drawable/view_background_timesheet_entry_button</item>
     </style>
 </resources>
