@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -24,14 +25,18 @@ class TimeSheetEntryFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val v = inflater.inflate(R.layout.fragment_time_sheet_entries, container, false)
+        val view = inflater.inflate(R.layout.fragment_time_sheet_entries, container, false)
 
-        val btnNewEntry = v.findViewById<Button>(R.id.btnNewEntry)
+        val btnNewEntry = view.findViewById<Button>(R.id.btnNewEntry)
         btnNewEntry.setOnClickListener {
-            MainActivity().replaceFragment(NewTimeSheetEntryFragment())
+            //MainActivity().replaceFragment(NewTimeSheetEntryFragment())
+            val newEntryFragment = NewTimeSheetEntryFragment()
+            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.frameLayout, newEntryFragment)
+            transaction.commit()
         }
 
-        return v
+        return view
     }
 
 
