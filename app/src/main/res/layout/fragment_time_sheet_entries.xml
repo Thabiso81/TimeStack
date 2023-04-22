@@ -39,7 +39,7 @@
          />
 
 
-        <LinearLayout
+    <LinearLayout
             android:id="@+id/topLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,14 +64,87 @@
                 android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:layout_marginHorizontal="10dp"
-                android:background="@drawable/view_backround_calendar_textview"
+                android:background="@drawable/view_background_textview"
                 android:drawableRight="@drawable/ic_calendar"
                 android:drawablePadding="20dp"
-                android:hint=""
+                android:inputType=""
                 android:textColorHint="#090A0B" />
         </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/View_holder_color"
+        android:orientation="horizontal"
+        />
 
+    <LinearLayout
+        android:id="@+id/midLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="7dp"
+
+        android:layout_gravity="start"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+
+            android:text="Max daily goal:"
+            android:textColor="#ffffff"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/maxHoursWorked"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/view_background_textview"
+            android:drawableRight="@drawable/ic_clock"
+            android:drawablePadding="20dp"
+            android:inputType="time"
+            android:textColorHint="#090A0B" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lowerLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginVertical="7dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+
+            android:text="Min daily goal:"
+            android:textColor="#ffffff"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/minHoursWorked"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/view_background_textview"
+            android:drawableRight="@drawable/ic_clock"
+            android:drawablePadding="20dp"
+            android:inputType="time"
+            android:textColorHint="#090A0B" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -214,10 +287,10 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnNewEntry"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="180dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="7dp"
         android:background="@drawable/view_background_timesheet_entry_button"
         android:backgroundTint="@null"
